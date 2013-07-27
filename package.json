@@ -18,5 +18,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pangwa/bae-message/issues"
+  },
+  "dependencies": {
+    "http" : "*"
   }
 }
