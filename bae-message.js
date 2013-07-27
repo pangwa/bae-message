@@ -3,10 +3,6 @@ var http = require('http');
 var crypto = require('crypto');
 var url = require('url');
 
-
-var md5 = crypto.createHash('md5');
-
-
 var BaeBaseUrl = 'bcms.api.duapp.com';
 var BasePath = '/rest/2.0/bcms/';
 
@@ -43,6 +39,8 @@ function signRequest(method, url, params, secret){
     }
     var basicString = method + url + paramStr + secret;
     var encoded = URLEncode(basicString);
+
+    var md5 = crypto.createHash('md5');
     md5.update(encoded);
     var sign = md5.digest('hex');
     var body = '';
