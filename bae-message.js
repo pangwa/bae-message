@@ -23,14 +23,13 @@ function signRequest(method, url, params, secret){
     for(v in params){
         paramStr += v + '=' + params[v];
     }
-    var basicString = method + paramStr + secret;
+    var basicString = method + url + paramStr + secret;
     var encoded = queryString.escape(basicString);
-    console.log(encoded);
     md5.update(encoded);
     var sign = md5.digest('hex');
     var body = '';
     for(v in params){
-        body += queryString.escape(v) + '=' + queryString.escape(params[v]);
+        body += queryString.escape(v) + '=' + queryString.escape(params[v]) + '&';
     }
     body += 'sign=' + sign; //append the signature
     return body;

@@ -4,7 +4,7 @@
   "description": "Message module for Bae Cloud Messaging.",
   "main": "bae-message.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha -t 5000"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "url": "https://github.com/pangwa/bae-message/issues"
   },
   "dependencies": {
-    "http" : "*"
+    "http" : "*",
+    "mocha" : ">= 1.2"
   }
 }
