@@ -1,0 +1,22 @@
+{
+  "name": "bae-message",
+  "version": "0.1.0",
+  "description": "Message module for Bae Cloud Messaging.",
+  "main": "bae-message.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pangwa/bae-message"
+  },
+  "keywords": [
+    "bae",
+    "cloud-message"
+  ],
+  "author": "pangwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pangwa/bae-message/issues"
+  }
+}

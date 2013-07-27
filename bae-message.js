@@ -1,0 +1,6 @@
+
+
+exports.BaeMessage = function(opt){
+
+}
+
