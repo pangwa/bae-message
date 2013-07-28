@@ -1,6 +1,6 @@
 {
   "name": "bae-message",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Message module for Bae Cloud Messaging.",
   "main": "bae-message.js",
   "scripts": {

@@ -86,6 +86,8 @@ module.exports = function(opt){
         var client_id = opt.key;
         var srvUrl = BasePath + opt.queue;
         var timeStamp = Math.round(+new Date()/ 1000);
+        if(typeof(to) != "string")
+            to = JSON.stringify(to);
         var params = {
             address : to,
             mail_subject : subject,

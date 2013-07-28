@@ -16,13 +16,14 @@ Example
       queue: 'queue ID'
     });
     
+    // 
+    // also support multiple to addresses
+    // bae.mail('fromAddress', ['toaddress1', 'toaddress2'], 'subject', 'mail body');
     bae.mail('fromAddress', 'to', 'subject', 'mail body');
     
 Known Issue
 ---
  * Can't set from address
- * Can't send mail to multiple addresses
- * 
 
 TODO
 ---
