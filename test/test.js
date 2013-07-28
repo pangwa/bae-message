@@ -28,6 +28,6 @@ describe('test Bae-message', function(){
       '259eea423dee18c7b865b0777cd657cc'
     );
     assert.equal(body, 'method=publish&message=HelloWorld&client_id=6E820afd87518a475f83e8a279c0d367&timestamp=1329472104&sign=5ff65389cd8f3a2fd822ec0bd434c3d9');
-  })
+  });
 })
 

@@ -1,4 +1,3 @@
-
 var http = require('http');
 var crypto = require('crypto');
 var url = require('url');
@@ -17,7 +16,6 @@ function URLEncode(str) {
   return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
   replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
 }
-
 
 //
 // check the sign algorithm at:
@@ -67,11 +65,11 @@ module.exports = function(opt){
 
     function prepareRequest(opts){
         var req = http.request(opts, function(res){
-            console.log('STATUS: ' + res.statusCode);
-            console.log('HEADERS: ' + JSON.stringify(res.headers));
+            //console.log('STATUS: ' + res.statusCode);
+            //console.log('HEADERS: ' + JSON.stringify(res.headers));
 
             res.on('data', function (chunk) {
-                console.log('BODY: ' + chunk);
+                //console.log('BODY: ' + chunk);
             });
         });
 
@@ -109,8 +107,8 @@ module.exports = function(opt){
                 "Content-Type" : "application/x-www-form-urlencoded"
             }
         };
-        console.log('sending request to ' + reqURL);
-        console.log('with body' + body);
+        //console.log('sending request to ' + reqURL);
+        //console.log('with body' + body);
         var req = prepareRequest(options);
         req.write(body);
         req.end();
@@ -118,3 +116,4 @@ module.exports = function(opt){
 }
 
 module.exports.signRequest = signRequest;
+
