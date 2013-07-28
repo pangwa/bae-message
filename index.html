@@ -52,21 +52,21 @@
 <p>使用bae-message发送电子邮件非常简单, 你只需加载bae-message模块并提供一些初始化参数就可以开始使用它发送邮件了.
 下面是示例代码:</p>
 
-<pre><code>// 加载bae-message模块
-var BaeMessage = require('bae-message');
-// 初始化bae-message, 需要提示BAE的密钥对以及需要使用的队列编号
-// 你可以在: [百度开发者中心](http://developer.baidu.com/bae/ref/key/) 查看和管理你的密钥对
-var bae = new BaeMessage({
-  key : 'your key', //API KEY
-  secret : 'your secret', //API 密钥
-  queue: 'queue ID'  //队列编号
-});
-//通过mail函数发送邮件, 参数分别为 发件人地址, 收件人地址, 主题, 内容
-bae.mail('fromAddress', 'to', 'subject', 'mail body');
-// 
-// 本模块也支持同时发送给多个收件人, 这种情况下, 收件人地址用数组传入
-// bae.mail('fromAddress', ['toaddress1', 'toaddress2'], 'subject', 'mail body');
-</code></pre>
+<div class="highlight"><pre>    <span class="c1">// 加载bae-message模块</span>
+    <span class="kd">var</span> <span class="nx">BaeMessage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'bae-message'</span><span class="p">);</span>
+    <span class="c1">// 初始化bae-message, 需要提示BAE的密钥对以及需要使用的队列编号</span>
+    <span class="c1">// 你可以在: [百度开发者中心](http://developer.baidu.com/bae/ref/key/) 查看和管理你的密钥对</span>
+    <span class="kd">var</span> <span class="nx">bae</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BaeMessage</span><span class="p">({</span>
+      <span class="nx">key</span> <span class="o">:</span> <span class="s1">'your key'</span><span class="p">,</span> <span class="c1">//API KEY</span>
+      <span class="nx">secret</span> <span class="o">:</span> <span class="s1">'your secret'</span><span class="p">,</span> <span class="c1">//API 密钥</span>
+      <span class="nx">queue</span><span class="o">:</span> <span class="s1">'queue ID'</span>  <span class="c1">//队列编号</span>
+    <span class="p">});</span>
+    <span class="c1">//通过mail函数发送邮件, 参数分别为 发件人地址, 收件人地址, 主题, 内容</span>
+    <span class="nx">bae</span><span class="p">.</span><span class="nx">mail</span><span class="p">(</span><span class="s1">'fromAddress'</span><span class="p">,</span> <span class="s1">'to'</span><span class="p">,</span> <span class="s1">'subject'</span><span class="p">,</span> <span class="s1">'mail body'</span><span class="p">);</span>
+    <span class="c1">// </span>
+    <span class="c1">// 本模块也支持同时发送给多个收件人, 这种情况下, 收件人地址用数组传入</span>
+    <span class="c1">// bae.mail('fromAddress', ['toaddress1', 'toaddress2'], 'subject', 'mail body');</span>
+</pre></div>
 
 <h2>
 <a name="%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98" class="anchor" href="#%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="octicon octicon-link"></span></a>已知问题</h2>
