@@ -3,6 +3,8 @@ bae-message [![Build Status](https://travis-ci.org/pangwa/bae-message.png)](http
 
 Message module for Bae Cloud Messaging.
 
+中文用户请访问[中文官方网站](http://pangwa.github.io/bae-message/)
+
 Example
 ------
 ###
