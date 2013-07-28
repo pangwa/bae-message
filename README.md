@@ -1,4 +1,4 @@
-bae-message [![Build Status](hthttps://github.com/pangwa/bae-message/edit/master/README.md#tps://travis-ci.org/pangwa/bae-message.png)](https://travis-ci.org/pangwa/bae-message)
+bae-message [![Build Status](https://travis-ci.org/pangwa/bae-message.png)](https://travis-ci.org/pangwa/bae-message)
 ===========
 
 Message module for Bae Cloud Messaging.
