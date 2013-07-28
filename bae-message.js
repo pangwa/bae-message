@@ -34,10 +34,16 @@ function signRequest(method, url, params, secret){
     //
     // form the parameters string
     var paramStr = '';
+    var keys = [];
     for(v in params){
-        paramStr += v + '=' + params[v];
+        keys.push(v);
+    }
+    keys.sort();
+    for(var i = 0; i < keys.length; i++){
+        paramStr += keys[i] + '=' + params[keys[i]];
     }
     var basicString = method + url + paramStr + secret;
+    //console.log('basic string: ' + basicString);
     var encoded = URLEncode(basicString);
 
     var md5 = crypto.createHash('md5');
